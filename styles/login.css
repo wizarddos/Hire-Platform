@@ -1,0 +1,45 @@
+.login{
+    margin-left: 50%;
+}
+
+.login__input{
+    background-color: rgb(226, 225, 225);
+    height: 30px;
+}
+@supports(calc()){
+    .login__input{
+        width: calc(auto + 10px);
+    }
+    
+}
+
+@supports not (calc()){
+    .login__input{
+        width: auto;
+    }
+}
+
+@media(max-width: 1738px){
+    .login__submit{
+        margin-top: 5px;
+    }
+}
+
+@media(max-width: 1346px){
+    .login__input--password{
+        margin-top: 5px;
+    }
+}
+   
+.login__submit{
+    width: auto;
+    background-color: deepskyblue;
+    border-color: deepskyblue;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.login__submit:hover{
+    background-color: dodgerblue;
+}
+

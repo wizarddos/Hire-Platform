@@ -1,0 +1,50 @@
+@supports(display: inline){
+    .section{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: inline;
+    }
+}
+
+@supports not (display: inline){
+    .section{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: block;
+    }
+}
+
+fieldset{
+    padding: 2%;
+    background-color: aqua;
+}
+
+.error{
+    color: #ff0000;
+}
+
+.register__input{
+    width: 50%;
+    height: 25px;
+    margin-top: 2%;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.register__input--submit{
+    padding: 5px;
+    width: 25%;
+    background-color: antiquewhite;
+}
+
+.register__input--submit:hover{
+    background-color: rgb(252, 247, 240);
+}
+
+.g-recaptcha{
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}

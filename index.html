@@ -1,0 +1,269 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title> Freeraceling Platform- Home Page</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="styles/index.css"/>
+        <link rel="stylesheet" href="styles/login.css"/>
+    </head>
+    <body>
+        <header class = "header">
+            <h1>Witaj na naszej stronie</h1>
+            <form class = "login" action="scripts/php/login.php" method = "POST">
+                <input type = "text" name = "login" class = "login__input" placeholder="login"/>
+                <input type = "password" name = "pass" class = "login__input login__input--password" placeholder="hasło"/>
+                <input type = "submit" value = "zaloguj się" class = "login__submit"/>
+            </form>
+        </header>
+        <main class = "main">
+            <nav class = "nav">
+                <h2>Kategorie Freealncerów</h2>
+                <br/>
+                <ul class = "nav__ul"> 
+
+
+                    <form action="show-freelanc.php" method="GET">
+                        <li> 
+                            <h3>Programowanie</h3>
+                                <select label = "Programers" name = "select">
+                                    <optgroup label = "Web-developerzy">
+                                        <option value="Front">Front-end developerzy</option>
+                                        <option value="Back">Back-end developerzy</option>
+                                        <option value="Full">Full-Stack developerzy</option>
+                                    </optgroup>
+                                    <optgroup label=" Aplikacje Mobilne">
+                                        <option value="Android"> Na Androida</option>
+                                        <option value="IOS"> Na IOS</option>
+                                        <option value="App-Full"> Na IOS i Androida</option>
+                                    </optgroup>
+                                    <optgroup label = "Aplikacje Desktopowe">
+                                        <option value="Windows"> Na Windows</option>
+                                        <option value="Mac"> Na MacOs</option>
+                                        <option value="Linux"> Na Linux</option>
+                                    </optgroup>
+                                </select>
+                            <br/>
+                            <input type = "submit" value="Szukaj Specjalisty" class = "nav__input--submit" />
+                        </li>
+                    </form>
+
+
+                    <br/>
+                    <form action="show-freelanc.php" method="GET">
+                        <li> 
+                            <h3>Projektowanie</h3>
+                                <select label = "designers" name = "select">
+                                    <option value = "Web">Web-designer</option>
+                                    <option value = "Clothes">Projektant Ubrań</option>
+                                    <option value = "House">Projektant Wnętrz</option>
+                                    <option value = "Graf">Projektant Grafik</option>
+                                    <option value = "3d">Projektant 3D</option>
+                                    <option value = "Arch">Architekt</option>
+                                </select>
+                            <br/>
+                            <input type = "submit" value="Szukaj Specjalisty" class = "nav__input--submit" />
+                        </li>
+                    </form>
+
+
+                    <br/>
+                    <form action="show-freelanc.php" method="GET">
+                        <li> 
+                            <h3>Multimedia</h3>
+                                <select label = "designers" name = "select">
+                                    <optgroup label="Fotografia">
+                                        <option value = "Photo">Fotograf</option>
+                                        <option value = "Model">Model</option>
+                                        <option value = "edit">Edytor Zdjęć</option>
+                                    </optgroup>
+                                    <optgroup label="Wideo">
+                                        <option value = "Camera">Kamerzysta</option>
+                                        <option value = "edit">Montażysta</option>
+                                    </optgroup>
+                                    <optgroup label="Dźwięk">
+                                        <option value = "Camera">Lektorzy</option>
+                                        <option value = "edit">Montażysta Dźwięku</option>
+                                    </optgroup>
+                                </select>
+                            <br/>
+                            <input type = "submit" value="Szukaj Specjalisty" class = "nav__input--submit" />
+                        </li>
+                    </form>
+
+
+                    <br/>
+                    <form action="show-freelanc.php" method="GET">
+                        <li> 
+                            <h3>SEO i Marketing</h3>
+                                <select label = "designers" name = "select">
+                                    <option value = "SEO">Specjalista SEO</option>
+                                    <optgroup label="Marketing">
+                                        <option value = "Social">Marketing w Social Media</option>
+                                        <option value = "Ads">Specjalista Reklamowy</option>
+                                        <option value = "Afil">Marketing Afiliacyjny</option>
+                                    </optgroup>
+                                </select>
+                            <br/>
+                            <input type = "submit" value="Szukaj Specjalisty" class = "nav__input--submit" />
+                        </li>
+                    </form>
+
+                    
+                    <br/>
+                    <form action="show-freelanc.php" method="GET">
+                        <li> 
+                            <h3>Teksty</h3>
+                                <select label = "text" name = "select">
+                                    <option value = "transl">Tłumaczenia</option>
+                                    <optgroup label="Teksty">
+                                        <option value = "articles">Artytuły</option>
+                                        <option value = "Copy">Copywriting</option>
+                                        <option value = "descs">Opisy</option>
+                                    </optgroup>
+                                </select>
+                            <br/>
+                            <input type = "submit" value="Szukaj Specjalisty" class = "nav__input--submit" />
+                        </li>
+                    </form>
+
+
+                </ul>
+            </nav>
+            <section class = "section">
+                <article class = "section__article">
+                    <h2>Znajdź Freealncerów Do swojego projektu</h2>
+                </article>
+                <article class = "section__article">
+                    <h2>Lub szukaj Zleceń</h2>
+                </article>
+            </section>
+
+
+            <nav class = "nav"  style = "text-align: right;" >
+                <h2>Kategorie Zleceń</h2>
+                <br/>
+                <ul class = "nav__ul">
+
+
+                    <form action="show-project.php" method="GET">
+                        <li> 
+                            <h3>Programowanie</h3>
+                                <select label = "Programers" name = "select">
+                                    <optgroup label = "Web-developerzy">
+                                        <option value="Front">Front-end</option>
+                                        <option value="Back">Back-end</option>
+                                        <option value="Full">Full-Stack</option>
+                                    </optgroup>
+                                    <optgroup label=" Aplikacje Mobilne">
+                                        <option value="Android"> Na Androida</option>
+                                        <option value="IOS"> Na IOS</option>
+                                        <option value="App-Full"> Na IOS i Androida</option>
+                                    </optgroup>
+                                    <optgroup label = "Aplikacje Desktopowe">
+                                        <option value="Windows"> Na Windows</option>
+                                        <option value="Mac"> Na MacOs</option>
+                                        <option value="Linux"> Na Linux</option>
+                                    </optgroup>
+                                </select>
+                            <br/>
+                            <input type = "submit" value="Szukaj Specjalisty" class = "nav__input--submit" />
+                        </li>
+                    </form>
+
+
+                    <br/>
+                    <form action="show-project.php" method="GET">
+                        <li> 
+                            <h3>Projektowanie</h3>
+                                <select label = "designers" name = "select">
+                                    <option value = "Web">Projektowanie stron</option>
+                                    <option value = "Clothes">Projektowanie Ubrań</option>
+                                    <option value = "House">Projektanie Wnętrz</option>
+                                    <option value = "Graf">Projektowanie Grafik</option>
+                                    <option value = "3d">Projektowanie 3D</option>
+                                    <option value = "Arch">Projekty architektoniczne</option>
+                                </select>
+                            <br/>
+                            <input type = "submit" value="Szukaj Zlecenia" class = "nav__input--submit" />
+                        </li>
+                    </form>
+
+
+                    <br/>
+                    <form action="show-project.php" method="GET">
+                        <li> 
+                            <h3>Multimedia</h3>
+                                <select label = "designers" name = "select">
+                                    <optgroup label="Fotografia">
+                                        <option value = "Photo">Sesje zdjęciowe</option>
+                                        <option value = "Model">Modeling</option>
+                                        <option value = "edit">Edycja Zdjęć</option>
+                                    </optgroup>
+                                    <optgroup label="Wideo">
+                                        <option value = "Camera">Zlecenia Kamerzysty</option>
+                                        <option value = "edit">Montaż filmów</option>
+                                    </optgroup>
+                                    <optgroup label="Dźwięk">
+                                        <option value = "lector">Lektorskie</option>
+                                        <option value = "edit">Montażysta Dźwięku</option>
+                                    </optgroup>
+                                </select>
+                            <br/>
+                            <input type = "submit" value="Szukaj Specjalisty" class = "nav__input--submit" />
+                        </li>
+                    </form>
+
+
+                    <br/>
+                    <form action="show-project.php" method="GET">
+                        <li> 
+                            <h3>SEO i Marketing</h3>
+                                <select label = "designers" name = "select">
+                                    <option value = "SEO">Specjalista SEO</option>
+                                    <optgroup label="Marketing">
+                                        <option value = "Social">Marketing w Social Media</option>
+                                        <option value = "Ads">Specjalista Reklamowy</option>
+                                        <option value = "Afil">Marketing Afiliacyjny</option>
+                                    </optgroup>
+                                </select>
+                            <br/>
+                            <input type = "submit" value="Szukaj Specjalisty" class = "nav__input--submit" />
+                        </li>
+                    </form>
+
+                    
+                    <br/>
+                    <form action="show-project.php" method="GET">
+                        <li> 
+                            <h3>Teksty</h3>
+                                <select label = "text" name = "select">
+                                    <option value = "transl">Tłumaczenia</option>
+                                    <optgroup label="Teksty">
+                                        <option value = "articles">Artytuły</option>
+                                        <option value = "Copy">Copywriting</option>
+                                        <option value = "descs">Opisy</option>
+                                    </optgroup>
+                                </select>
+                            <br/>
+                            <input type = "submit" value="Szukaj Specjalisty" class = "nav__input--submit" />
+                        </li>
+                    </form>
+
+
+                </ul>
+            </nav>
+        </main>
+        <a href = "signup.php" class = "register">Nie masz konta? Zarejestruj się i dołącz do naszej społeczności</a>
+
+        <footer class = "footer">
+            <h4>Copywritited by Freeraceling-Platform.org &copy;</h4>
+            <a href = "about.html">O nas</a>
+            <br/>
+            kontakt
+            <br/>
+            <a href = "report.php">zgłoś błąd</a>
+            <br/>
+        </footer>
+    </body>
+</html>
