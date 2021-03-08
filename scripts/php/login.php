@@ -28,11 +28,17 @@ try{
                     $_SESSION['error'] = "nieprawidłowy login lub hasło";
                     header("Location: ../../index.html");
                 }else{
-                    $_SESSION['nick'] = $assoc['user'];
+                    $_SESSION['id'] = $assoc['id'];
+                    $_SESSION['name'] = $assoc['name'];
+                    $_SESSION['surname'] = $assoc['surname'];
+                    $_SESSION['desription'] = $assoc['opis'];
+                    $_SESSION['role'] = $assoc['role'];
                     if($assoc['isAdmin']){
-                        header("Location: AdminPanel.php");
+                        $_SESSION['admin'] = true;
+                        header("Location: ../../AdminPanel.php");
                     }else{
-                        header("Location: dlaUsera.php");
+                        $_SESSION['loged'] = true;
+                        header("Location: ../../dlaUsera.php");
                     }
                 }
             }else{

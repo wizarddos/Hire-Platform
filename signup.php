@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="styles/index.css"/>
         <link rel="stylesheet" href="styles/register.css"/>
         <script src='https://www.google.com/recaptcha/api.js'></script>
-        <script src="scripts/JS/Showpass.js"></script>
+        <script src="scripts/JS/signup.js"></script>
     </head>
     <body>
         <header class = "header">
@@ -27,7 +27,20 @@
                                 echo '<span class = "error">'.$_SESSION['e_login'].'</span>';
                                 unset($_SESSION['e_login']);
                             }
+                            
                         ?>
+                        <br/>
+                        <div class = "register__div">
+                            <input type = "text" name = "name"  placeholder="Imie"/>
+                            <input type = "text" name = "surname"  placeholder="Nazwisko"/>
+                            <br/>
+                            <?php 
+                                if(isset($_SESSION['e_name'])){
+                                    echo '<span class = "error">'.$_SESSION['e_name'].'</span>';
+                                    unset($_SESSION['e_name']);
+                                }
+                            ?>
+                        </div>
                         <br/>
                         <input type = "email" name = "email" class = "register__input" placeholder="Email"/>
                         <br/>
@@ -48,6 +61,20 @@
                                 unset($_SESSION['e_pass']);
                             }
                         ?>
+                        <br/>
+                        <div class = "register__div">
+                            <h3>Kim jesteś</h3>
+                            <label><input type = "radio" value = "recruit"  name = "role"/> Rekruter</label>
+                            <label><input type = "radio" value = "freelanc"  name = "role" id = "freelanc"/> Freelancer</label>
+                            <div id = "select">
+                            </div>
+                            <?php 
+                                if(isset($_SESSION['e_role'])){
+                                    echo '<span class = "error">'.$_SESSION['e_role'].'</span>';
+                                    unset($_SESSION['e_role']);
+                                }
+                            ?>
+                        </div>
                         <br/>
                         <br/>
                         <div class="g-recaptcha" data-sitekey="6LdnnD8aAAAAAHPtaZAT6Qjruc9P-wRjmocz3YJ3"></div>

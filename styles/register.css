@@ -27,7 +27,6 @@ fieldset{
 
 .register__input{
     width: 50%;
-    height: 25px;
     margin-top: 2%;
     border-radius: 5px;
     height: 40px;
@@ -47,4 +46,16 @@ fieldset{
     display: table;
     margin-left: auto;
     margin-right: auto;
+}
+
+.register__div{
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.register__div > input{
+    width: 25%;
+    height: 40px;
+    border-radius: 5px;
 }

@@ -9,8 +9,13 @@ function showpass() {
 
     if (y.type === "password") {
         y.type = "text";
-      } else {
+    } else {
         y.type = "password";
-      }
-  }
+    }
+}
+
+
+
+
+
 
